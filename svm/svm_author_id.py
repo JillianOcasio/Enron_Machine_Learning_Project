@@ -24,6 +24,23 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 ### your code goes here ###
+def SVMaccuracy(features_train, labels_train, features_test, labels_test):
+    ### import the sklearn module for GaussianNB
+    from sklearn.svm import SVC
+    # Create Classifer 
+    clf = SVC(kernel="linear")
+    t0 = time()
+    clf.fit(features_train, labels_train)
+    print "training time:", round(time()-t0, 3), "s"
+    ### use the trained classifier to predict labels for the test features
+    t1 = time()
+    pred = clf.predict(features_test)
+    print "predict time:", round(time()-t1, 3), "s"
+    from sklearn.metrics import accuracy_score
+    accuracy = accuracy_score(labels_test,pred)
+    return accuracy
+
+print SVMaccuracy(features_train, labels_train, features_test, labels_test)
 
 #########################################################
 
