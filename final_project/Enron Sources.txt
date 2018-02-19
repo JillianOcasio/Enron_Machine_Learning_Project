@@ -1,0 +1,5 @@
+﻿https://public.tableau.com/profile/diego2420#!/vizhome/Udacity/UdacityDashboard
+https://discussions.udacity.com/t/question-about-the-projects-instruction/196563/16
+Sklearn documentation 
+Matlibplot documentation 
+I relied on the Udacity Forums a lot.
